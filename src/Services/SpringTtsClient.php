@@ -33,7 +33,6 @@ class SpringTtsClient
             'json' => [
                 'text'  => $text,
                 'voice' => $voice ?? $this->defaultVoice,
-                'filename' => 'Message'
             ]
         ]);
 
