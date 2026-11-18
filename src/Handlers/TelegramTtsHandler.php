@@ -73,7 +73,7 @@ class TelegramTtsHandler
             $bot->sendAudio(
                 audio: InputFile::make($wavPath),
                 title: $cleanTitle,
-                caption: "Message"
+                performer: "Message"
             );
         } catch (Throwable $e) {
             $bot->sendMessage("❌ Errore nell'elaborazione del file:\n" . $e->getMessage());
