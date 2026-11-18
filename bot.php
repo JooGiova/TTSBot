@@ -39,5 +39,8 @@ $bot->onMessageType(MessageType::TEXT, function (Nutgram $bot) use ($handler) {
 
 $bot->onDocument([$handler, 'handleDocument']);
 
+// Svuota tutti i messaggi ricevuti mentre il bot era spento
+$bot->deleteWebhook(drop_pending_updates: true);
+
 echo "Bot avviato in modalità Polling. Premi Ctrl+C per fermarlo.\n";
 $bot->run();
